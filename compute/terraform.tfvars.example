@@ -1,0 +1,22 @@
+/** AWS Variables 
+*
+*  For generating keeys see: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
+*/
+
+aws_config = {
+  access_key = ""
+  secret_key = ""
+}
+
+
+/** Digital Ocean Variables 
+*
+*  1. How to Create a Personal Access Token: https://docs.digitalocean.com/reference/api/create-personal-access-token/
+*  2. How to Upload SSH Public Keys to a DigitalOcean Account: https://docs.digitalocean.com/platform/teams/upload-ssh-keys/
+*/
+
+do_config = {
+  do_token             = ""
+  ssh_fingerprint      = ""
+  ssh_private_key_path = ""
+}
