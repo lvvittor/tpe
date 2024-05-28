@@ -1,9 +1,3 @@
-resource "digitalocean_vpc" "hello_world" {
-  name   = var.vpc_name
-  region = var.droplet_region
-}
-
-
 resource "digitalocean_droplet" "hello_world" {
   image      = var.droplet_image
   name       = var.droplet_name
@@ -11,10 +5,11 @@ resource "digitalocean_droplet" "hello_world" {
   size       = var.droplet_size
   backups    = false
   monitoring = true
-  vpc_uuid   = digitalocean_vpc.hello_world.id
   ssh_keys = [
     var.ssh_fingerprint
   ]
+
+  user_data = "${file("./cfg/user_data.sh")}"
 
   connection {
     host        = self.ipv4_address

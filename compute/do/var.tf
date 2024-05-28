@@ -34,11 +34,5 @@ variable "droplet_size" {
 variable "droplet_name" {
   type = string
   description = "Name of the droplet"
-  default     = "hello_world"
-}
-
-variable "vpc_name" {
-  type = string
-  description = "Name of the VPC"
-  default     = "hello_world_vpc"
+  default     = "hello-world"
 }

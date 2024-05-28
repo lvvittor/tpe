@@ -1,5 +1,5 @@
 #!/bin/bash
-#echo "<h1>Hello, World</h1>" > index.html
+
 cat <<- EOF > index.html
 <!DOCTYPE html>
 <head>
