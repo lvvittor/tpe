@@ -13,5 +13,4 @@ variable "do_config" {
     ssh_fingerprint = string
     ssh_private_key_path = string
   })
-  
 }
