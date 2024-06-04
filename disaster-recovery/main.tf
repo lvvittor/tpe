@@ -9,6 +9,6 @@ module "passive" {
   source     = "./cell"
   aws_config = var.aws_config
   region     = "us-west-1"
-  vpc_azs    = ["us-west-1b", "us-west-1c"]
+  vpc_azs    = ["us-west-1a", "us-west-1c"]
 }
 
