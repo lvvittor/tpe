@@ -31,6 +31,13 @@ terraform plan -out plan.tfplan
 terraform apply plan.tfplan
 ```
 
+There is one diagram as code file in every folder, to run them to generate the diagrams:
+Have python3 installed
+```bash
+pip install diagrams
+python3 diagram_file.py
+```
+
 ### Clean up
 
 Destroy the resources.
