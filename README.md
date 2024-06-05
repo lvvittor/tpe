@@ -1,8 +1,8 @@
 # 72.20 - Redes de Información
-##1C2024 - TPE Infrastructure as Code
+
 ## Grupo 8
 
-### Integrantes
+### Contributors
 - Vittor, Lucas
 - Szejer, Ian
 - Ortu, Agustina Sol
