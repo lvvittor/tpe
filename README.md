@@ -45,6 +45,14 @@ Destroy the resources.
 ```bash
 terraform destroy
 ```
+## Secrets and Credentials managin
+There are a few approachs for keeping our secrets and credentials safe:
+
+* Local files: The user to deploys the proyect must have local files with the secrets and credentials, this is free, but its not a automatic proccess. All the security relays on the users that deploy de proyects.
+* Encripted files in AWS: The credentials become one more resource. this has a small cost. The secrets must be carefully handled. This adds complexity to the structure.
+* Secret Store in AWS: Credentials become one more resource, you can use dedicated databases to store the credentials. This can be rotated and add more complexity over them. This is the most expensive alternative but the most secure and mature.
+
+
 ## Dependencies
 
 - [Terraform](https://www.terraform.io/)
