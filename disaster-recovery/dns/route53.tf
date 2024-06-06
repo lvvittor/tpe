@@ -1,5 +1,5 @@
 resource "aws_route53_zone" "primary" {
-  name = "${var.subdomain}.${var.domain}"
+  name = var.domain
 }
 resource "aws_route53_record" "primary" {
   zone_id        = aws_route53_zone.primary.zone_id
