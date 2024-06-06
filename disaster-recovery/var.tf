@@ -5,3 +5,12 @@ variable "aws_config" {
     secret_key = string
   })
 }
+variable subdomain {
+  type        = string
+  description = "Subdomain for our cluster"
+}
+
+variable domain {
+  type        = string
+  description = "Domain for our cluster"
+}
