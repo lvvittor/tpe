@@ -1,8 +1,8 @@
 # 72.20 - Redes de Información
-##1C2024 - TPE Infrastructure as Code
+
 ## Grupo 8
 
-### Integrantes
+### Contributors
 - Vittor, Lucas
 - Szejer, Ian
 - Ortu, Agustina Sol
@@ -31,6 +31,13 @@ terraform plan -out plan.tfplan
 terraform apply plan.tfplan
 ```
 
+There is one diagram as code file in every folder, to run them to generate the diagrams:
+Have python3 installed
+```bash
+pip install diagrams
+python3 diagram_file.py
+```
+
 ### Clean up
 
 Destroy the resources.
@@ -38,6 +45,14 @@ Destroy the resources.
 ```bash
 terraform destroy
 ```
+## Secrets and Credentials managing
+There are a few approaches to keeping our secrets and credentials safe:
+
+* Local files: The user to deploy the project must have local files with the secrets and credentials, this is free, but it's not an automatic process. All the security relies on the users that deploy the projects.
+* Encrypted files in AWS: The credentials become one more resource. this has a small cost. The secrets must be carefully handled. This adds complexity to the structure.
+* Secret Store in AWS: Credentials become one more resource, you can use dedicated databases to store the credentials. This can be rotated and add more complexity to them. This is the most expensive alternative but the most secure and mature.
+
+
 ## Dependencies
 
 - [Terraform](https://www.terraform.io/)

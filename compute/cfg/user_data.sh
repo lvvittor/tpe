@@ -1,5 +1,7 @@
 #!/bin/bash
 
+host_ip=$(hostname -I | awk '{print $1}')
+
 cat <<- EOF > index.html
 <!DOCTYPE html>
 <head>
@@ -37,7 +39,7 @@ cat <<- EOF > index.html
 </head>
 <body>
 	<container><h1>Hello World</h1>
-	<p>We are live.</p></container>
+	<p>We are live from $host_ip</p></container>
 </body>
 </html>
 
