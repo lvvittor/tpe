@@ -5,12 +5,14 @@ variable "aws_config" {
     secret_key = string
   })
 }
-variable subdomain {
+variable "subdomain" {
   type        = string
   description = "Subdomain for our cluster"
+  default     = "failover"
 }
 
-variable domain {
+variable "domain" {
   type        = string
   description = "Domain for our cluster"
+  default     = "itbamafia.com"
 }

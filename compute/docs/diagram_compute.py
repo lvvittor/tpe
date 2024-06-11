@@ -1,5 +1,5 @@
 from diagrams import Diagram, Cluster
-from diagrams.aws.compute import EC2,ECS
+from diagrams.aws.compute import EC2
 
 with Diagram("Simple EC2 in region", show=False, direction="TB") as one:
     with Cluster("Region: us-east-1"):

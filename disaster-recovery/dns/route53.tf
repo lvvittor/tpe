@@ -1,8 +1,6 @@
-resource "aws_route53_zone" "primary" {
-  name = var.domain
-}
+
 resource "aws_route53_record" "primary" {
-  zone_id        = aws_route53_zone.primary.zone_id
+  zone_id        = data.aws_route53_zone.prebuilt_hosted_zone.zone_id
   name           = "${var.subdomain}.${var.domain}"
   type           = "A"
   set_identifier = "${var.subdomain}-primary"
@@ -19,7 +17,7 @@ resource "aws_route53_record" "primary" {
 }
 
 resource "aws_route53_record" "secondary" {
-  zone_id        = aws_route53_zone.primary.zone_id
+  zone_id        = data.aws_route53_zone.prebuilt_hosted_zone.zone_id
   name           = "${var.subdomain}.${var.domain}"
   type           = "A"
   set_identifier = "${var.subdomain}-secondary"

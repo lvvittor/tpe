@@ -6,14 +6,8 @@ variable "aws_config" {
   })
 }
 
-variable "region" {
+variable "domain_name" {
   type        = string
-  description = "AWS Region"
-  default     = "ap-south-1"
-}
-
-variable "s3_name" {
-  type        = string
-  description = "Name of the S3 bucket"
-  default     = "s3-static-web"
+  description = "Domain name"
+  default     = "itbamafia.com"
 }
