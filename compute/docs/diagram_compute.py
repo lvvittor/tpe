@@ -7,3 +7,12 @@ with Diagram("Simple EC2 in region", show=False, direction="TB") as one:
         svc_group = [EC2("EC2_1")]
 
 one
+
+with Diagram("Simple droplet with firewall", show=False, direction="TB") as two:
+    with Cluster("Region: sfo3"):
+      droplet = Droplet("Droplet_1")
+      firewall = Firewall("Firewall")
+
+    firewall >> droplet
+
+two
